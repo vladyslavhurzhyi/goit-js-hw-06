@@ -18,12 +18,14 @@ function createBoxes() {
         const newDiv = `<div style= "background-color: ${getRandomHexColor()}; width: ${
             i * 10 + 30
         }px; height: ${i * 10 + 30}px"></div>`;
-
         markup.push(newDiv);
-        divBoxes.insertAdjacentHTML('beforeend', markup.join(''));
-
-        markup.splice(0, markup.length);
+        addBoxes();
     }
+}
+
+function addBoxes() {
+    divBoxes.insertAdjacentHTML('beforeend', markup.join(''));
+    markup.splice(0, markup.length);
 }
 
 function destroyDiv() {

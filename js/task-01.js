@@ -9,7 +9,7 @@ const categoriesRef = document.querySelector('#categories');
 
 console.log(`Number of categories:  ${categoriesRef.children.length}`);
 
-const allListTitle = document.querySelectorAll('.item');
+const allListTitle = categoriesRef.querySelectorAll('.item');
 
 allListTitle.forEach((item) => {
     console.log(
