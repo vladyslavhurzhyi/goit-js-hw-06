@@ -17,11 +17,15 @@ const btnEventIncrement = counterRef.querySelector(
 
 function counterDecr() {
     counter -= 1;
-    counterValue.textContent = counter;
+    updateCounter();
 }
 
 function counterIncr() {
     counter += 1;
+    updateCounter();
+}
+
+function updateCounter() {
     counterValue.textContent = counter;
 }
 
