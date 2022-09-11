@@ -7,9 +7,10 @@ const spanRef = inputFormRef.querySelector('#name-output');
 // console.log(spanRef.textContent);
 
 inputRef.addEventListener('input', (event) => {
-    if (event.currentTarget.value === '') {
+    const value = event.currentTarget.value.trim();
+    if (value === '') {
         spanRef.textContent = 'Anonymous';
     } else {
-        spanRef.textContent = event.currentTarget.value;
+        spanRef.textContent = value;
     }
 });
