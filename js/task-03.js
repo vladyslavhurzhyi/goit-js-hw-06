@@ -30,7 +30,7 @@ const listItems = images.map(({ url, alt }) => {
 
 const markup = listItems.join('');
 
-galleryRef.innerHTML = markup;
+galleryRef.insertAdjacentHTML('beforeend', markup);
 
 galleryRef.style.display = 'flex';
 
